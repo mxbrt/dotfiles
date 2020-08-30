@@ -1,0 +1,26 @@
+#!/bin/sh
+
+set -eu
+
+battery() {
+    local BAT0="/sys/class/power_supply/BAT0"
+    if [ -d ${BAT0} ]; then
+        case $(cat ${BAT0}/status) in
+            Charging) printf "CHR ";;
+            Discharging) printf "BAT ";;
+            Full) printf "FLL ";;
+            *) printf "UNK ";;
+        esac
+        printf "$(cat ${BAT0}/capacity | tr -s '\n')%% |"
+    fi
+}
+
+datetime() {
+    date +"%d-%m-%Y %R"
+}
+
+while true
+do
+    echo "$(battery) $(datetime)"
+    sleep 5
+done

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eux
+
+systemctl start libvirtd
+sudo virsh net-start default

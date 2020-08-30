@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -eu
+
+list () {
+    cat "$@" | sed -e 's/^#.*//g' -e 's/\s*#.*//g' -e '/^[[:space:]]*$/d'
+    echo
+}
+
+fd $(list $HOME/.sync)

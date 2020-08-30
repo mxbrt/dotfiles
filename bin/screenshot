@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "--region" ] || [ ! -e "/tmp/screenshot_region" ]; then
+    slurp > /tmp/screenshot_region
+fi
+region=$(cat /tmp/screenshot_region)
+grim -g "$region" $1
