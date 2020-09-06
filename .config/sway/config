@@ -137,9 +137,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# shortcut inhibitor for VM window
-bindsym --inhibited Ctrl+Escape shortcuts_inhibitor deactivate
-
 set $red #900000
 set $blue #285577
 set $gray #272727
