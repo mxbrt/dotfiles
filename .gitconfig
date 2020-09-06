@@ -1,0 +1,8 @@
+[user]
+	email = git@mxbr.me
+	name = Max Breitenfeldt
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtp.mailbox.org
+	smtpuser = mail@mxbr.me
+	smtpserverport = 465
