@@ -5,6 +5,6 @@ set -e
 cd $HOME
 [ -e $HOME/.gitdotfiles ] && rm -rf $HOME/.gitdotfiles
 alias dotfiles='git --git-dir=$HOME/.gitdotfiles/ --work-tree=$HOME'
-git clone --bare https://github.com/mxbrt/dotfiles $HOME/.gitdotfiles
+git clone --bare git@github.com/mxbrt/dotfiles $HOME/.gitdotfiles
 dotfiles checkout --force
 dotfiles config status.showUntrackedFiles no
