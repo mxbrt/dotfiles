@@ -70,6 +70,7 @@ let g:coc_global_extensions = [
             \]
 
 " Language specific
+au FileType markdown set cc=120
 au FileType rust set cc=100
 au FileType tex setlocal wrap linebreak nolist
 
