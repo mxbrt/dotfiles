@@ -46,39 +46,28 @@ Plug 'justinmk/vim-sneak'
 Plug 'rhysd/git-messenger.vim'
 " tex support for conceal
 Plug 'KeitaNakamura/tex-conceal.vim'
-" The ultimate snippet solution for Vim.
-Plug 'SirVer/ultisnips'
 call plug#end()
 
 " Plugin options
 let g:gruvbox_italic= 1
 let g:sneak#label = 1
 let g:vimtex_view_method="zathura"
+let g:tex_flavor="latex"
 let g:rustfmt_autosave = 1
 
 let g:tex_superscripts= "[0-9a-zA-W.,:;+-<>/()=]"
 let g:tex_subscripts= "[0-9aehijklmnoprstuvx,+-/().]"
 let g:tex_conceal="abdmg"
 
-let g:coc_global_extensions = [
-            \ 'coc-diagnostic',
-            \ 'coc-python',
-            \ 'coc-rust-analyzer',
-            \ 'coc-sh',
-            \ 'coc-omnisharp',
-            \ 'coc-snippets',
-            \]
-
 " Language specific
 au FileType markdown set cc=120
 au FileType rust set cc=100
 au FileType tex setlocal wrap linebreak nolist
 
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+"" Key bindings
+let mapleader="\<Space>"
+
+execute 'source ' stdpath('config') . '/coc.vim'
 
 " sneak
 map f <Plug>Sneak_f
@@ -86,33 +75,17 @@ map F <Plug>Sneak_F
 map t <Plug>Sneak_t
 map T <Plug>Sneak_T
 
-"" Key bindings
-" Use tab for trigger completion with characters ahead and navigate.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
 nnoremap J 8j
 nnoremap K 8k
 
 nnoremap Q <Nop>
 
-let mapleader="\<Space>"
 nnoremap <Leader>f :Ranger<cr>
 nnoremap <leader>g :Rg<cr>
 nnoremap <leader>n :lnext<cr>
 
 nnoremap <c-p> :FZF<cr>
 nnoremap <c-b> :Buffers<cr>
-
-" let g:coc_snippet_next = '<tab>'
 
 " Terminal bindings
 tnoremap <Esc> <C-\><C-n>
@@ -136,12 +109,6 @@ set termguicolors
 set bg=dark
 colorscheme gruvbox
 set signcolumn=yes
-
-" coc.vim
-set updatetime=100
-set shortmess+=c
-set nobackup
-set nowritebackup
 
 " open preview window on bottom
 set splitbelow
