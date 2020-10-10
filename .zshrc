@@ -27,6 +27,7 @@ alias cat=bat
 alias ls=exa -lah
 alias zathura=zathura --fork
 alias dotfiles='git --git-dir=$HOME/.gitdotfiles/ --work-tree=$HOME'
+alias lg=lazygit
 
 setopt extendedglob
 
