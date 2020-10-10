@@ -162,7 +162,7 @@ exec --no-startup-id nextcloud
 
 bindsym $mod+shift+q kill
 input * xkb_layout eu
-input * xkb_options caps:swapescape
+input * xkb_options caps:escape
 
 output DP-3 pos 0 738 res 2560x1440
 output DP-2 pos 2560 0 res 2560x1440 transform 270
