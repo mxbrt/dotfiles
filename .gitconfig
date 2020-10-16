@@ -6,3 +6,5 @@
 	smtpserver = smtp.mailbox.org
 	smtpuser = mail@mxbr.me
 	smtpserverport = 465
+[pull]
+	rebase = true
