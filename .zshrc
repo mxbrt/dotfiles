@@ -17,6 +17,7 @@ plugins=(
 
 # User configuration
 export EDITOR='nvim'
+export XDG_CURRENT_DESKTOP=sway
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -25,7 +26,7 @@ export LIBVA_DRIVER_NAME=radeon
 alias vim=nvim
 alias cat=bat
 alias ls=exa -lah
-alias zathura=zathura --fork
+alias zathura="zathura --fork"
 alias dotfiles='git --git-dir=$HOME/.gitdotfiles/ --work-tree=$HOME'
 alias lg=lazygit
 
