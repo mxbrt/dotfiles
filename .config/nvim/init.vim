@@ -84,7 +84,7 @@ nnoremap <Leader>f :Ranger<cr>
 nnoremap <leader>g :Rg<cr>
 nnoremap <leader>n :lnext<cr>
 
-nnoremap <c-p> :FZF<cr>
+nnoremap <c-f> :FZF<cr>
 nnoremap <c-b> :Buffers<cr>
 
 " Terminal bindings
