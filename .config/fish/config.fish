@@ -5,6 +5,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export EDITOR=nvim
 export XDG_CURRENT_DESKTOP=sway
 export LIBVA_DRIVER_NAME=radeon
+export XDG_CACHE_HOME="$HOME/.cache"
 
 alias vim=nvim
 alias cat=bat
