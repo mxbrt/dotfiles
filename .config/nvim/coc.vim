@@ -1,11 +1,12 @@
 " coc.nvim
 
 let g:coc_global_extensions = [
+            \ 'coc-clangd',
             \ 'coc-diagnostic',
             \ 'coc-python',
             \ 'coc-rust-analyzer',
             \ 'coc-sh',
-            \ 'coc-snippets',
+            \ 'coc-tsserver',
             \]
 
 " Remap keys for gotos
