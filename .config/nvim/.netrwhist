@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/max/tmp/python_adapter'
+let g:netrw_dirhist_3='/home/max/git/thttpd/testcases'
+let g:netrw_dirhist_2='/home/max/tmp/thttpd_afl/testcases'
+let g:netrw_dirhist_1='/home/max/tmp/devolo/_firmware-dlan-500-wifi-v3-2-0.dvl.extracted/squashfs-root/etc/devolo'
+let g:netrw_dirhist_0='/home/max/tmp/devolo/_firmware-dlan-500-wifi-v3-2-0.dvl.extracted/squashfs-root/var/www'
+let g:netrw_dirhist_9='/home/max/tmp/devolo/_firmware-dlan-500-wifi-v3-2-0.dvl.extracted/squashfs-root/var/www/cgi-bin'
+let g:netrw_dirhist_8='/home/max/tmp/devolo/_firmware-dlan-500-wifi-v3-2-0.dvl.extracted/squashfs-root/var/www'
+let g:netrw_dirhist_7='/home/max/git/bevy/examples'
+let g:netrw_dirhist_6='/home/max/projects/os/docs'
+let g:netrw_dirhist_5='/home/max/projects/os/build'

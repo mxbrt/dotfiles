@@ -36,6 +36,7 @@ Plug 'justinmk/vim-syntax-extra'
 Plug 'lervag/vimtex'
 Plug 'matze/vim-tex-fold'
 Plug 'tikhomirov/vim-glsl'
+Plug 'rhysd/vim-clang-format'
 
 " Trial
 " surround.vim: quoting/parenthesizing made simple
@@ -46,6 +47,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'rhysd/git-messenger.vim'
 " tex support for conceal
 Plug 'KeitaNakamura/tex-conceal.vim'
+" Editorconfig
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 " Plugin options
@@ -54,18 +57,21 @@ let g:sneak#label = 1
 let g:vimtex_view_method="zathura"
 let g:tex_flavor="latex"
 let g:rustfmt_autosave = 1
+let g:clang_format#auto_format_on_insert_leave = 1
 
 let g:tex_superscripts= "[0-9a-zA-W.,:;+-<>/()=]"
 let g:tex_subscripts= "[0-9aehijklmnoprstuvx,+-/().]"
 let g:tex_conceal="abdmg"
 
 " Language specific
+let g:markdown_folding = 1
 au FileType markdown set cc=120
 au FileType rust set cc=100
 au FileType tex setlocal wrap linebreak nolist
 
 "" Key bindings
 let mapleader="\<Space>"
+let maplocalleader='\'
 
 execute 'source ' stdpath('config') . '/coc.vim'
 
@@ -106,7 +112,7 @@ nnoremap <A-l> <C-w>l
 syntax on
 set conceallevel=1
 set termguicolors
-set bg=dark
+set bg=light
 colorscheme gruvbox
 set signcolumn=yes
 
@@ -114,9 +120,12 @@ set signcolumn=yes
 set splitbelow
 set mouse=a
 
+" only scroll selected split
+set noscrollbind
+
 set encoding=utf-8
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 set magic

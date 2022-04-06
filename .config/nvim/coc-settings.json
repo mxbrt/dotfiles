@@ -1,19 +1,4 @@
 {
-    "coc.preferences.formatOnSaveFiletypes": ["rust"],
-    "languageserver": {
-        "ccls": {
-            "command": "ccls",
-            "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
-            "rootPatterns": [".ccls-root", "compile_commands.json"],
-            "initializationOptions": {
-                "cache": {
-                    "directory": ".ccls-cache"
-                },
-                "client": {
-                    "snippetSupport": true
-                }
-            }
-        }
-    },
-    "rust-analyzer.inlayHints.chainingHints": false
+    "coc.preferences.formatOnSaveFiletypes": ["rust", "typescript", "typescriptreact"],
+    "rust-analyzer.inlayHints.chainingHints": false,
 }
