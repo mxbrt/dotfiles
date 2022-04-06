@@ -3,15 +3,25 @@
 set -eu
 
 battery() {
-    local BAT0="/sys/class/power_supply/BAT0"
-    if [ -d ${BAT0} ]; then
-        case $(cat ${BAT0}/status) in
+    local bat0="/sys/class/power_supply/BAT0"
+    if [ -d ${bat0} ]; then
+        local capacity=$(cat ${bat0}/capacity | tr -s '\n')
+        local status=$(cat ${bat0}/status)
+        case $status in
             Charging) printf "CHR ";;
             Discharging) printf "BAT ";;
             Full) printf "FLL ";;
             *) printf "UNK ";;
         esac
-        printf "$(cat ${BAT0}/capacity | tr -s '\n')%% |"
+        printf "$capacity %% |"
+
+        if [ "$capacity" -lt "5" ] && [ "$status" != "Charging" ]; then
+            systemctl suspend
+        fi
+
+        if [ "$capacity" -lt "10" ] && [ "$status" != "Charging" ]; then
+            swaynag -t warning -m "Battery low!"
+        fi
     fi
 }
 

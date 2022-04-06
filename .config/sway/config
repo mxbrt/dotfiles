@@ -166,6 +166,7 @@ exec --no-startup-id 'persway -a'
 exec --no-startup-id 'mako --default-timeout 1500'
 exec --no-startup-id nextcloud
 exec --no-startup-id opensnitch-ui
+exec --no-startup-id ~/bin/watch_battery
 
 bindsym $mod+shift+q kill
 input * xkb_layout eu
