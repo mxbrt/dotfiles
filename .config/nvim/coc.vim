@@ -27,7 +27,7 @@ function! s:show_documentation()
 endfunction
 
 " Symbol renaming.
-nmap <Leader>rn <Plug>(coc-rename)
+nmap <Leader>r <Plug>(coc-rename)
 
 " Map <tab> for trigger completion, completion confirm, snippet expand and jump
 inoremap <silent><expr> <TAB>

@@ -174,8 +174,14 @@ bindsym $mod+shift+q kill
 input * xkb_layout eu
 input * xkb_options caps:escape
 
-output DP-2 pos 0 0 res 2560x1440
-output DP-1 pos 2560 0 res 2560x1440 transform 270
-workspace 1 output DP-2
-workspace 2 output DP-1
-focus output DP-2
+set $mainDisplay DP-1
+set $secondaryDisplay DP-2
+
+output $mainDisplay pos 1440 0 res 2560x1440
+output $secondaryDisplay pos 0 0 res 2560x1440 transform 270
+output $secondaryDisplay disable
+bindsym $mod+p output $secondaryDisplay toggle
+
+workspace 1 output $mainDisplay
+workspace 2 output $secondaryDisplay
+focus output $mainDisplay
