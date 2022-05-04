@@ -108,16 +108,8 @@ bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 
 # Open specific applications in floating mode
-for_window [title="imgui-wgpu"] floating enable border pixel 1
-for_window [title="alsamixer"] floating enable border pixel 1
-for_window [title="File Transfer*"] floating enable
-for_window [class="Galculator"] floating enable border pixel 1
-for_window [class="GParted"] floating enable border normal
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
-for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
-for_window [class=".*on QEMU\/KVM"] shortcuts_inhibitor enable
+for_window [window_type="popup_menu"] floating enable
+for_window [window_type="menu"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -181,6 +173,7 @@ output $mainDisplay pos 1440 0 res 2560x1440
 output $secondaryDisplay pos 0 0 res 2560x1440 transform 270
 output $secondaryDisplay disable
 bindsym $mod+p output $secondaryDisplay toggle
+bindsym $mod+shift+p output $secondaryDisplay disable
 
 workspace 1 output $mainDisplay
 workspace 2 output $secondaryDisplay
