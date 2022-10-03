@@ -3,7 +3,7 @@
 set -e
 
 cd $HOME
-[ -e $HOME/.gitdotfiles ] && rm -rf $HOME/.gitdotfiles
+[ -e $HOME/.gitdotfiles ] && echo "ERROR: Found .gitdotfiles" && exit 1
 alias dotfiles='git --git-dir=$HOME/.gitdotfiles/ --work-tree=$HOME'
 git clone --bare git@github.com:mxbrt/dotfiles $HOME/.gitdotfiles
 dotfiles checkout --force
