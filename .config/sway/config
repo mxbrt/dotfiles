@@ -156,7 +156,6 @@ bindsym Mod1+w exec --no-startup-id firefox
 exec --no-startup-id udiskie
 exec --no-startup-id 'persway -a'
 exec --no-startup-id 'mako --default-timeout 1500'
-exec --no-startup-id nextcloud
 exec --no-startup-id ~/bin/watch_battery
 
 # enable xdg-desktop-portal-wlr (screensharing)
