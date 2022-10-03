@@ -8,7 +8,6 @@ export LIBVA_DRIVER_NAME=radeon
 export XDG_CACHE_HOME="$HOME/.cache"
 
 alias vim=nvim
-alias cat=bat
 alias ls=exa
 alias zathura='zathura --fork'
 alias dotfiles='git --git-dir=$HOME/.gitdotfiles/ --work-tree=$HOME'
