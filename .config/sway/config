@@ -56,8 +56,8 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+c split h;exec notify-send 'split horizontally'
-bindsym $mod+v split v;exec notify-send 'split vertically'
+bindsym $mod+c split h;exec notify-send 'open horizontal'
+bindsym $mod+v split v;exec notify-send 'open vertical'
 bindsym $mod+q split toggle
 
 # change layout
@@ -167,10 +167,12 @@ input * xkb_options caps:escape
 
 set $mainDisplay DP-1
 set $secondaryDisplay DP-2
+set $thirdDisplay HDMI-A-1
 
 output $mainDisplay pos 1440 0 res 2560x1440
 output $secondaryDisplay pos 0 0 res 2560x1440 transform 270
 output $secondaryDisplay disable
+output $thirdDisplay disable
 bindsym $mod+p output $secondaryDisplay toggle
 bindsym $mod+shift+p output $secondaryDisplay disable
 
