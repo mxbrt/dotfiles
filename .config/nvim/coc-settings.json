@@ -1,4 +1,5 @@
 {
     "coc.preferences.formatOnSaveFiletypes": ["rust", "typescript", "typescriptreact"],
-    "rust-analyzer.inlayHints.chainingHints": false,
+    "clangd.inlayHints.enable": false,
+    "rust-analyzer.inlayHints.enable": false
 }

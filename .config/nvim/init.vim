@@ -37,6 +37,7 @@ Plug 'lervag/vimtex'
 Plug 'matze/vim-tex-fold'
 Plug 'tikhomirov/vim-glsl'
 Plug 'rhysd/vim-clang-format'
+Plug 'DingDean/wgsl.vim'
 
 " Trial
 " surround.vim: quoting/parenthesizing made simple
@@ -86,10 +87,10 @@ nnoremap K 8k
 
 nnoremap Q <Nop>
 
-nnoremap <Leader>f :Ranger<cr>
-nnoremap <leader>g :Rg<cr>
 nnoremap <leader>n :lnext<cr>
 
+nnoremap <c-g> :Rg<cr>
+nnoremap <c-F> :Ranger<cr>
 nnoremap <c-f> :FZF<cr>
 nnoremap <c-b> :Buffers<cr>
 
@@ -122,6 +123,9 @@ set mouse=a
 
 " only scroll selected split
 set noscrollbind
+
+" use clipboard for yank/delete/change/put operations
+set clipboard=unnamedplus
 
 set encoding=utf-8
 set tabstop=2
